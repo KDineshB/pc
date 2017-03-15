@@ -3,11 +3,10 @@ public class EventRound {
 
   private int sNo;
 
-  private String round;
+  private String roundName;
 
   private String eventId;
 
   private String status;
 
-  private String ordinal;
 }

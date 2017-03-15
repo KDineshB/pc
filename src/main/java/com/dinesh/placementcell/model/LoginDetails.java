@@ -1,16 +1,11 @@
 package com.dinesh.placementcell.model;
 
-
 public class LoginDetails {
 
-  private String username;
+    private String userid;
 
-  private String password;
+    private String password;
 
-  private String college;
-
-  private String department;
-
-
+    private String role;
 
 }

@@ -11,6 +11,7 @@ package com.dinesh.placementcell.model;
  */
 public class UnderGraduationDetails {
 
+    private int sNo;
     private float sem1Sgpa;
 
     private float sem2Sgpa;
@@ -36,6 +37,6 @@ public class UnderGraduationDetails {
     private String arrearDetails;
 
     private String classObtained;
-    
+
     private Student student;
 }

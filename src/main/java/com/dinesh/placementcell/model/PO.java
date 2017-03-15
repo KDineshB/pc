@@ -9,19 +9,12 @@ package com.dinesh.placementcell.model;
  *
  * @author Dinesh
  */
-public class Skills {
+public class PO {
 
-    private int sNo;
-    private String skillSet;
+    private String userid;
 
-    private String otherCourses;
+    private String name;
+    private String college;
 
-    private int gateScore;
-
-    private int tancetScore;
-
-    private String amcatId;
-
-    private String cocubesId;
-    private Student student;
+    private String department;
 }

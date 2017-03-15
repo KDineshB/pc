@@ -1,10 +1,10 @@
 package com.dinesh.placementcell.model;
 
-
 public class EventDepartment {
 
-  private String eventId;
+    private int sNo;
+    private String eventId;
 
-  public String deptName;
+    public String deptName;
 
 }

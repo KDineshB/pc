@@ -10,32 +10,33 @@ package com.dinesh.placementcell.model;
  * @author Dinesh
  */
 public class PreGraduationDetails {
-    
-  private String sslcSchoolNamePlace;
 
-  private String sslcBoard;
+    private int sNo;
+    private String sslcSchoolNamePlace;
 
-  private int sslcYearofGrad;
+    private String sslcBoard;
 
-  private float sslcPercentage;
+    private int sslcYearofGrad;
 
-  private String hscSchoolNamePlace;
+    private float sslcPercentage;
 
-  private String hscBoard;
+    private String hscSchoolNamePlace;
 
-  private String hscStream;
+    private String hscBoard;
 
-  private int hscYearOfGrad;
+    private String hscStream;
 
-  private float hscPercentage;
+    private int hscYearOfGrad;
 
-  private float hscCuttOff;
+    private float hscPercentage;
 
-  private String diplomaClgNamePlace;
+    private float hscCuttOff;
 
-  private String diplomaClass;
+    private String diplomaClgNamePlace;
 
-  private int diplomaYearOfGrad;
+    private String diplomaClass;
 
-  private Student student;
+    private int diplomaYearOfGrad;
+
+    private Student student;
 }

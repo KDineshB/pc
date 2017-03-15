@@ -11,6 +11,7 @@ package com.dinesh.placementcell.model;
  */
 public class PersonalDetails {
 
+    private int sNo;
     private String fatherName;
 
     private String motherName;

@@ -2,16 +2,17 @@ package com.dinesh.placementcell.model;
 
 public class EventCriteria {
 
-  private float sslcPercentage;
+    private int sNo;
+    private float sslcPercentage;
 
-  private float hscPercentage;
+    private float hscPercentage;
 
-  private float cgpa;
+    private float cgpa;
 
-  private String arraerStatus;
+    private String arraerStatus;
 
-  private String skillsPreferred;
+    private String skillsPreferred;
 
-  public int eventId;
+    public int eventId;
 
 }

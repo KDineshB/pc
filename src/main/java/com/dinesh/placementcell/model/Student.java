@@ -8,7 +8,6 @@ public class Student {
      * This is student bean class
      */
     private String regNo;
-    /* {author=Dinesh, version=1.0}*/
 
     private String name;
 

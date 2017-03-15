@@ -40,14 +40,17 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.CompanyDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-        <id name="companyId" column="company_id">
-            <generator class="increment"></generator>
-        </id>
-        <property name="companyName" column="company_name"/>
-        <property name="basicInfo" column="basic_info"/>
-        <property name="glassdoorLink" column="glassdoor_link"/>
-        <property name="website" column="website"/>
-      
-    </class> 
+  <class dynamic-insert="false" table="event_criteria_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.EventCriteria" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+      <id name="sNo" column="s_no"> 
+          <generator class="increment">
+          </generator>
+      </id>
+      <property name="sslcPercentage" column="sslc_percentage"/>
+      <property name="hscPercentage" column="hsc_percentage"/>
+      <property name="sslcPercentage" column="sslc_percentage"/>
+      <property name="cgpa" column="cgpa"/>
+      <property name="arrearStatus" column="arrear_status"/>
+      <property name="skillsPreferred" column="skills_preferred"/>
+      <property name="eventId" column="event-id"/>
+  </class>    
 </hibernate-mapping>
