@@ -40,18 +40,16 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.PersonalDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/>
-
-  
-  <property name="fatherName" column="father_name"/>
-      <property name="motherName" column="mother_name"/>
-        <property name="annualIncome" column="annual_income"/>
-        <property name="motherOccupation" column="mother_occupation"/>
-         <property name="community" column="community"/>
-          <property name="languagesKnown" column="languages_known"/>
-           <property name="address" column="address"/>
-          <property name=" placementDetails" column=" placement_details"/>
-           <property name="willingness" column="willingness"/>
-           <property name="student" column="student"/>
-       </class>
+    <class dynamic-insert="false" table="" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.Skills" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+        <id name="sNo" column="s_no" >
+            <generator class="increment"/>
+        </id>
+        <property name="skillSet" column="skill_set"/>
+        <property name="otherCourse" column="othercourse"/>
+        <property name="gateScore" column="gate_score"/>
+        <property name="tancetScore" column="tancet_score"/>
+        <property name="amcatId" column="amcat_id"/>
+        <property name="cocubesId" column="cocubes_id"/>
+        <one-to-one name="student" class="com.dinesh.Skills"/> 
+    </class>
 </hibernate-mapping>

@@ -40,28 +40,24 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.PreGraduationDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/>
-<id name="companyId" column="company_id">
-            <generator class="asssigned"></generator>
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.UnderGraduationDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+        <id name="sNo" column="s_no">
+            <generator class="increment"/>
         </id>
-        <property name="sslcSchoolNamePlace" column="sslc_schoolnameplace"/>
-         <property name="sslcBoard" column="sslc_board"/>
-          <property name="sslcYearofGrad" column="sslc_yearofGrad"/>
-             <property name="sslcPercentage" column="sslc_percentage"/>
-            <property name="hscSchoolNamePlace" column="hsc_schoolnameplace"/>
-              <property name="hscBoard" column="hsc_oard"/>
-             <property name="hscStream" column="hsc_stream"/>
-             <property name="hscYearOfGrad" column="hsc_yearofgrad"/>
-               <property name="hscPercentage" column="hsc-percentage"/>
-                 <property name="hscCuttOff" column="hsc_cuttoff"/>
-                 <property name="diplomaClgNamePlace" column="diploma_clgnameplace"/>
-                 <property name="diplomaClass" column="diploma_class"/>
-                 
-                              <property name="diplomaYearOfGrad" column="diploma_yearofgrad"/>
-                 <property name="student" column="student"/>
-             
-     
-       
-      
-    </class> 
+        <property name="semOneSgpa" column="sem_one_sgpa"/>
+        <property name="semTwoSgpa" column="sem_two_sgpa"/>
+        <property name="semThreegpa" column="sem_three_sgpa"/>
+        <property name="semFourSgpa" column="sem_four_sgpa"/>
+        <property name="semFiveSgpa" column="sem_five_sgpa"/>
+        <property name="semSixSgpa" column="sem_six_sgpa"/>
+        <property name="semSevenSgpa" column="sem_seven_sgpa"/>
+        <property name="semEightSgpa" column="sem_eight_sgpa"/>
+        <property name="cgpa" column="cgpa"/>
+        <property name="arrearStatus" column="arrear_status"/>
+        <property name="noOfStandingArrears" column="no_of_standing_arrears"/>
+        <property name="arrearDetails" column="arraer_details"/>
+        <property name="classObtained" column="class_obtained"/>
+        <one-to-one name="student" class="com.dinesh.placementcell.model.Student"/>
+    </class>
+    
 </hibernate-mapping>

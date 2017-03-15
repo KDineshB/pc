@@ -17,7 +17,6 @@ public class UnderGraduationDetails {
     private float sem2Sgpa;
 
     private float sem3Sgpa;
-
     private float sem4Sgpa;
 
     private float sem5Sgpa;
