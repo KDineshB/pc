@@ -40,19 +40,14 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.EventCriteria" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-      <id name="eventId" column="event_id">
+  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.EventDepartment" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/>
+   <id name="sNo" column="s_no">
           <generator class="assigned">
               <param name="" ></param>
           </generator>
         
       </id>
-      <property name="sslcPercentage" column="sslc_percentage"/>
-       <property name="hscPercentage" column="hsc_percentage"/>
-        <property name="cgpa" column="cgpa"/> 
-        <property name="arraerStatus" column="arraer_status"/>
-        <property name="skillsPreferred" column="skills_preferred"/>
+      <property name="deptName" column="dept_name"/>
+      <property name="contact" column="contact"/>
   </class>
-
-  </class>    
 </hibernate-mapping>

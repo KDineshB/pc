@@ -40,19 +40,18 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.EventCriteria" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-      <id name="eventId" column="event_id">
-          <generator class="assigned">
-              <param name="" ></param>
-          </generator>
-        
-      </id>
-      <property name="sslcPercentage" column="sslc_percentage"/>
-       <property name="hscPercentage" column="hsc_percentage"/>
-        <property name="cgpa" column="cgpa"/> 
-        <property name="arraerStatus" column="arraer_status"/>
-        <property name="skillsPreferred" column="skills_preferred"/>
-  </class>
+  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.PersonalDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/>
 
-  </class>    
+  
+  <property name="fatherName" column="father_name"/>
+      <property name="motherName" column="mother_name"/>
+        <property name="annualIncome" column="annual_income"/>
+        <property name="motherOccupation" column="mother_occupation"/>
+         <property name="community" column="community"/>
+          <property name="languagesKnown" column="languages_known"/>
+           <property name="address" column="address"/>
+          <property name=" placementDetails" column=" placement_details"/>
+           <property name="willingness" column="willingness"/>
+           <property name="student" column="student"/>
+       </class>
 </hibernate-mapping>

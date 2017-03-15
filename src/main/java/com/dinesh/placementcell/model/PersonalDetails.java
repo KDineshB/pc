@@ -10,7 +10,7 @@ package com.dinesh.placementcell.model;
  * @author Dinesh
  */
 public class PersonalDetails {
-
+    private int sNo;
     private String fatherName;
 
     private String motherName;

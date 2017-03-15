@@ -10,7 +10,7 @@ package com.dinesh.placementcell.model;
  * @author Dinesh
  */
 public class Skills {
-
+    private int sNo;
     private String skillSet;
 
     private String otherCourses;
