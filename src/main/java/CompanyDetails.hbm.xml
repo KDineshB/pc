@@ -41,10 +41,10 @@ Contributor(s):
 -->
 <hibernate-mapping>
     <class dynamic-insert="false" table="company_details_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.CompanyDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-        <id name="companyId" column="company_id">
-            <generator class="increment"></generator>
+        <id name="companyName" column="company_name">
+            <generator class="assigned"></generator>
         </id>
-        <property name="companyName" column="company_name"/>
+        
         <property name="basicInfo" column="basic_info"/>
         <property name="glassdoorLink" column="glassdoor_link"/>
         <property name="website" column="website"/>
