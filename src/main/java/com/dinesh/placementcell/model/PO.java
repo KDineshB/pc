@@ -11,19 +11,19 @@ package com.dinesh.placementcell.model;
  */
 public class PO {
 
-    private String userid;
+    private String userId;
 
     private String name;
     private String college;
 
     private String department;
 
-    public String getUserid() {
-        return userid;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {

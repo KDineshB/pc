@@ -9,7 +9,7 @@ public class EventCriteria {
 
     private float cgpa;
 
-    private String arraerStatus;
+    private String arrearStatus;
 
     private String skillsPreferred;
 
@@ -47,13 +47,15 @@ public class EventCriteria {
         this.cgpa = cgpa;
     }
 
-    public String getArraerStatus() {
-        return arraerStatus;
+    public String getArrearStatus() {
+        return arrearStatus;
     }
 
-    public void setArraerStatus(String arraerStatus) {
-        this.arraerStatus = arraerStatus;
+    public void setArrearStatus(String arrearStatus) {
+        this.arrearStatus = arrearStatus;
     }
+
+
 
     public String getSkillsPreferred() {
         return skillsPreferred;

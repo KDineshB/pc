@@ -40,16 +40,16 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-    <class dynamic-insert="false" table="event_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.Event" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-        <id name="eventid" column="event_id">
-            <generator class="increment"></generator>
+    <class dynamic-insert="false" table="" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.Skills" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+        <id name="sNo" column="s_no" >
+            <generator class="increment"/>
         </id>
-        <property name="companyName" column="company_name"/>
-        <property name="eventDate" column="event_date"/>
-        <list name="eventRounds">
-            <key column="event_id"/>
-            <index column="type"/>
-            <one-to-many class="com.dinesh.placementcell.model.Employee"/>
-            </list>
+        <property name="skillSet" column="skill_set"/>
+        <property name="otherCourses" column="other_courses"/>
+        <property name="gateScore" column="gate_score"/>
+        <property name="tancetScore" column="tancet_score"/>
+        <property name="amcatId" column="amcat_id"/>
+        <property name="cocubesId" column="cocubes_id"/>
+        <one-to-one name="student" class="com.dinesh.placementcell.model.Student"/> 
     </class>
 </hibernate-mapping>

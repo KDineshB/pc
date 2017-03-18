@@ -12,20 +12,20 @@ package com.dinesh.placementcell.model;
 public class UnderGraduationDetails {
 
     private int sNo;
-    private float sem1Sgpa;
+    private float semOneSgpa;
 
-    private float sem2Sgpa;
+    private float semTwoSgpa;
 
-    private float sem3Sgpa;
-    private float sem4Sgpa;
+    private float semThreeSgpa;
+    private float semFourSgpa;
 
-    private float sem5Sgpa;
+    private float semFiveSgpa;
 
-    private float sem6Sgpa;
+    private float semSixSgpa;
 
-    private float sem7Sgpa;
+    private float semSevenSgpa;
 
-    private float sem8Sgpa;
+    private float semEightSgpa;
 
     private float cgpa;
 
@@ -47,69 +47,71 @@ public class UnderGraduationDetails {
         this.sNo = sNo;
     }
 
-    public float getSem1Sgpa() {
-        return sem1Sgpa;
+    public float getSemOneSgpa() {
+        return semOneSgpa;
     }
 
-    public void setSem1Sgpa(float sem1Sgpa) {
-        this.sem1Sgpa = sem1Sgpa;
+    public void setSemOneSgpa(float semOneSgpa) {
+        this.semOneSgpa = semOneSgpa;
     }
 
-    public float getSem2Sgpa() {
-        return sem2Sgpa;
+    public float getSemTwoSgpa() {
+        return semTwoSgpa;
     }
 
-    public void setSem2Sgpa(float sem2Sgpa) {
-        this.sem2Sgpa = sem2Sgpa;
+    public void setSemTwoSgpa(float semTwoSgpa) {
+        this.semTwoSgpa = semTwoSgpa;
     }
 
-    public float getSem3Sgpa() {
-        return sem3Sgpa;
+    public float getSemThreeSgpa() {
+        return semThreeSgpa;
     }
 
-    public void setSem3Sgpa(float sem3Sgpa) {
-        this.sem3Sgpa = sem3Sgpa;
+    public void setSemThreeSgpa(float semThreeSgpa) {
+        this.semThreeSgpa = semThreeSgpa;
     }
 
-    public float getSem4Sgpa() {
-        return sem4Sgpa;
+    public float getSemFourSgpa() {
+        return semFourSgpa;
     }
 
-    public void setSem4Sgpa(float sem4Sgpa) {
-        this.sem4Sgpa = sem4Sgpa;
+    public void setSemFourSgpa(float semFourSgpa) {
+        this.semFourSgpa = semFourSgpa;
     }
 
-    public float getSem5Sgpa() {
-        return sem5Sgpa;
+    public float getSemFiveSgpa() {
+        return semFiveSgpa;
     }
 
-    public void setSem5Sgpa(float sem5Sgpa) {
-        this.sem5Sgpa = sem5Sgpa;
+    public void setSemFiveSgpa(float semFiveSgpa) {
+        this.semFiveSgpa = semFiveSgpa;
     }
 
-    public float getSem6Sgpa() {
-        return sem6Sgpa;
+    public float getSemSixSgpa() {
+        return semSixSgpa;
     }
 
-    public void setSem6Sgpa(float sem6Sgpa) {
-        this.sem6Sgpa = sem6Sgpa;
+    public void setSemSixSgpa(float semSixSgpa) {
+        this.semSixSgpa = semSixSgpa;
     }
 
-    public float getSem7Sgpa() {
-        return sem7Sgpa;
+    public float getSemSevenSgpa() {
+        return semSevenSgpa;
     }
 
-    public void setSem7Sgpa(float sem7Sgpa) {
-        this.sem7Sgpa = sem7Sgpa;
+    public void setSemSevenSgpa(float semSevenSgpa) {
+        this.semSevenSgpa = semSevenSgpa;
     }
 
-    public float getSem8Sgpa() {
-        return sem8Sgpa;
+    public float getSemEightSgpa() {
+        return semEightSgpa;
     }
 
-    public void setSem8Sgpa(float sem8Sgpa) {
-        this.sem8Sgpa = sem8Sgpa;
+    public void setSemEightSgpa(float semEightSgpa) {
+        this.semEightSgpa = semEightSgpa;
     }
+
+  
 
     public float getCgpa() {
         return cgpa;

@@ -7,39 +7,46 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 
-public abstract class AbstarctDao<PK extends Serializable,T> {
-	
-private final Class<T> persistentClass;
+public abstract class AbstarctDao<PK extends Serializable, T> {
 
-@SuppressWarnings("unchecked")
-public AbstarctDao() {
-	this.persistentClass = (Class<T>) (((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[1]);
-}
+    private final Class<T> persistentClass;
 
-@Autowired 
-private SessionFactory sessionFactory;
+    @SuppressWarnings("unchecked")
+    public AbstarctDao() {
+        this.persistentClass = (Class<T>) (((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[1]);
+    }
 
+    @Autowired
+    private SessionFactory sessionFactory;
 
-protected Session getSession() {
-	return sessionFactory.getCurrentSession();
-	
-}
+    protected Session getSession() {
+        return sessionFactory.getCurrentSession();
+    }
 
-@SuppressWarnings("unchecked")
-public T getByKey(PK key){
-	return (T)getSession().get(persistentClass, key);
-}
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
 
-public void persist(T entity){
-	getSession().persist(entity);
-}
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
-public void delete(T entity){
-	getSession().delete(entity);
-}
+    @SuppressWarnings("unchecked")
+    public T getByKey(PK key) {
+        return (T) getSession().get(persistentClass, key);
+    }
 
-protected Criteria createEntityCriteria(){
-	return getSession().createCriteria(persistentClass);
-}
+    public void persist(T entity) {
+        getSession().persist(entity);
+    }
+
+    public void delete(T entity) {
+        getSession().delete(entity);
+    }
+
+    protected Criteria createEntityCriteria() {
+        return getSession().createCriteria(persistentClass);
+    }
 }

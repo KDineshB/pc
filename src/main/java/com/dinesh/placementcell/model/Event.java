@@ -20,7 +20,7 @@ public class Event {
 
     private List<EventDepartment> department;
 
-    private String college;
+    private List<EventCollege> college;
 
     private String startTime;
 
@@ -88,11 +88,11 @@ public class Event {
         this.department = department;
     }
 
-    public String getCollege() {
+    public List<EventCollege> getCollege() {
         return college;
     }
 
-    public void setCollege(String college) {
+    public void setCollege(List<EventCollege> college) {
         this.college = college;
     }
 

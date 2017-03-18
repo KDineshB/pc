@@ -8,11 +8,13 @@ package com.dinesh.placementcell.dao;
 import com.dinesh.placementcell.model.*;
 import java.util.List;
 import org.hibernate.Criteria;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Dinesh
  */
+
 public interface StudentDAO {
 
     public Student findStudentByRegNo(String regNo);

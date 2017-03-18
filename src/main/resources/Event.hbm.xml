@@ -40,30 +40,26 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-    <class dynamic-insert="false" table="student" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.Student" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-        <id name="regNo" column="reg_no">
-            <generator class="assigned">
-                
-            </generator>
+    <class dynamic-insert="false" table="event_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.Event" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+        <id name="eventId" column="event_id">
+            <generator class="increment"></generator>
         </id>
-        <property name="name" column="name"/>
-        <property name="clgName" column="clg_name"/>
-        <property name="degree" column="degree"/>
-        <property name="branch" column="branch"/>
-        <property name="section" column="section"/>
-        <property name="dateofBirth" column="dob"/>
-        <property name="gender" column="gender"/>
-        <property name="email" column="email"/>
-        <property name="altEmail" column="alt_email"/>
-        <property name="phone" column="phone"/>
-        <property name="stay" column="stay"/>
-        <property name="admissionMode" column="admission_mode"/>
-        <property name="firstGraduate" column="first_graduate"/>
-        <property name="bloodGroup" column="blood_group"/>
-        <one-to-one name="preGraduationDetails" class="com.dinesh.placementcell.model.preGraduationDetails" lazy="false"/>    
-        <one-to-one name="underGraduationDetails" class="com.dinesh.placementcell.model.underGraduationDetails" lazy="false"/>
-        <one-to-one name="skills" class="com.dinesh.placementcell.model.Skills" lazy="false"/>
-        <one-to-one name="personalDetails" class="com.dinesh.placementcell.model.personalDetails" lazy="false"/>
-        <property name="advisor" column="advisor"/>
+        <property name="companyName" column="company_name"/>
+        <property name="eventDate" column="event_date"/>
+        <list name="rounds">
+            <key column="event_id"/>
+            <index column="type"/>
+            <one-to-many class="com.dinesh.placementcell.model.EventRound"/>
+        </list>
+        <list name="department">
+            <key column="event_id"/>
+            <index column="type"/>
+            <one-to-many class="com.dinesh.placementcell.model.EventDepartment"/>
+        </list>
+        <list name="college">
+            <key column="event_id"/>
+            <index column="type"/>
+            <one-to-many class="com.dinesh.placementcell.model.EventCollege"/>
+        </list>
     </class>
 </hibernate-mapping>

@@ -47,9 +47,9 @@ Contributor(s):
     <property name="connection.username">pc</property>
     <property name="connection.password">dinesh</property>
     <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-    <mapping resource="../java/advisor_details.hbm.xml"/>
-    <mapping resource="../java/company_details.hbm.xml"/>
-    <mapping resource="../java/event_criteria.hbm.xml"/>
+    <mapping resource="../java/AdvisorDetails.hbm.xml"/>
+    <mapping resource="../java/CompanyDetails.hbm.xml"/>
+    <mapping resource="../java/EventCriteria.hbm.xml"/>
     <mapping resource="../java/Event.hbm.xml"/>
     <mapping resource="../java/EventRound.hbm.xml"/>
     <mapping resource="../java/EventCollege.hbm.xml"/>
@@ -57,6 +57,9 @@ Contributor(s):
     <mapping resource="../java/LoginDetails.hbm.xml"/>
     <mapping resource="../java/PO.hbm.xml"/>
     <mapping resource="../java/Student.hbm.xml"/>
+    <mapping resource="../java/PersonalDetails.hbm.xml"/>
+    <mapping resource="../java/PreGraduationDetails.hbm.xml"/>
+    <mapping resource="../java/ShortlistedStudents.hbm.xml"/>
     <mapping resource="../java/PlacedStudentsDetails.hbm.xml"/>
     <mapping resource="../java/Skills.hbm.xml"/>
     <mapping resource="../java/UnderGraduationDetails.hbm.xml"/>

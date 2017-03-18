@@ -40,19 +40,30 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-    <class dynamic-insert="false" table="personal_details" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.PersonalDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-        <id name="sNo" column="s_no">
-            <generator class="increment"/>
+    <class dynamic-insert="false" table="student" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.Student" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+        <id name="regNo" column="reg_no">
+            <generator class="assigned">
+                
+            </generator>
         </id>
-        <property name="fatherName" column="father_name"/>
-        <property name="motherName" column="mother_name"/>
-        <property name="annualIncome" column="annual_income"/>
-        <property name="motherOccupation" column="mother_occupation"/>
-        <property name="community" column="community"/>
-        <property name="languagesKnown" column="languages_known"/>
-        <property name="address" column="address"/>
-        <property name=" placementDetails" column=" placement_details"/>
-        <property name="willingness" column="willingness"/>
-        <one-to-one name="student" class="com.dinesh.placementcell.model.Student"></one-to-one>
+        <property name="name" column="name"/>
+        <property name="clgName" column="clg_name"/>
+        <property name="degree" column="degree"/>
+        <property name="branch" column="branch"/>
+        <property name="section" column="section"/>
+        <property name="dateOfBirth" column="dob"/>
+        <property name="gender" column="gender"/>
+        <property name="email" column="email"/>
+        <property name="altEmail" column="alt_email"/>
+        <property name="phone" column="phone"/>
+        <property name="stay" column="stay"/>
+        <property name="admissionMode" column="admission_mode"/>
+        <property name="firstGraduate" column="first_graduate"/>
+        <property name="bloodGroup" column="blood_group"/>
+        <one-to-one name="preGraduationDetails" class="com.dinesh.placementcell.model.PreGraduationDetails" lazy="false"/>    
+        <one-to-one name="underGraduationDetails" class="com.dinesh.placementcell.model.UnderGraduationDetails" lazy="false"/>
+        <one-to-one name="skills" class="com.dinesh.placementcell.model.Skills" lazy="false"/>
+        <one-to-one name="personalDetails" class="com.dinesh.placementcell.model.PersonalDetails" lazy="false"/>
+        <property name="advisor" column="advisor"/>
     </class>
 </hibernate-mapping>

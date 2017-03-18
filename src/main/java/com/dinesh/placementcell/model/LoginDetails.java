@@ -2,18 +2,18 @@ package com.dinesh.placementcell.model;
 
 public class LoginDetails {
 
-    private String userid;
+    private String userId;
 
     private String password;
 
     private String role;
 
-    public String getUserid() {
-        return userid;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getPassword() {

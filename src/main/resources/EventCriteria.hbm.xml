@@ -40,24 +40,16 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.UnderGraduationDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-        <id name="sNo" column="s_no">
-            <generator class="increment"/>
-        </id>
-        <property name="semOneSgpa" column="sem_one_sgpa"/>
-        <property name="semTwoSgpa" column="sem_two_sgpa"/>
-        <property name="semThreegpa" column="sem_three_sgpa"/>
-        <property name="semFourSgpa" column="sem_four_sgpa"/>
-        <property name="semFiveSgpa" column="sem_five_sgpa"/>
-        <property name="semSixSgpa" column="sem_six_sgpa"/>
-        <property name="semSevenSgpa" column="sem_seven_sgpa"/>
-        <property name="semEightSgpa" column="sem_eight_sgpa"/>
-        <property name="cgpa" column="cgpa"/>
-        <property name="arrearStatus" column="arrear_status"/>
-        <property name="noOfStandingArrears" column="no_of_standing_arrears"/>
-        <property name="arrearDetails" column="arraer_details"/>
-        <property name="classObtained" column="class_obtained"/>
-        <one-to-one name="student" class="com.dinesh.placementcell.model.Student"/>
-    </class>
-    
+  <class dynamic-insert="false" table="event_criteria_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.EventCriteria" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+      <id name="sNo" column="s_no"> 
+          <generator class="increment">
+          </generator>
+      </id>
+      <property name="sslcPercentage" column="sslc_percentage"/>
+      <property name="hscPercentage" column="hsc_percentage"/>
+      <property name="cgpa" column="cgpa"/>
+      <property name="arrearStatus" column="arrear_status"/>
+      <property name="skillsPreferred" column="skills_preferred"/>
+      <property name="eventId" column="event-id"/>
+  </class>    
 </hibernate-mapping>
