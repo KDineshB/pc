@@ -8,44 +8,52 @@
             http://www.springframework.org/schema/beans 
             http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
             http://www.springframework.org/schema/mvc 
-            http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd 
+            http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd 
             http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+            http://www.springframework.org/schema/context/spring-context-4.3.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-4.3.xsd" xmlns:tx="http://www.springframework.org/schema/tx">
     
-    
-    <context:component-scan base-package="com.dinesh.placementcell"/>
+    <mvc:annotation-driven/>
+    <tx:annotation-driven/>
+    <context:component-scan base-package="com.dinesh"/>
     <bean id="sessionFactory"
-          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-      <property name="dataSource" ref="placementDataSource"/>
-      <property name="mappingResources">
-          <list>
-          <value>AdvisorDetails.hbm.xml</value>
-          <value>CompanyDetails.hbm.xml</value>
-          <value>EventCriteria.hbm.xml</value>
-          <value>Event.hbm.xml</value>
-          <value>EventRound.hbm.xml</value>
-          <value>EventCollege.hbm.xml</value>
-          <value>EventDepartment.hbm.xml</value>
-          <value>LoginDetails.hbm.xml</value>
-          <value>PO.hbm.xml</value>
-          <value>Student.hbm.xml</value>
-          <value>PersonalDetails.hbm.xml</value>
-          <value>PreGraduationDetails.hbm.xml</value>
-          <value>ShortlistedStudents.hbm.xml</value>
-          <value>PlacedStudentsDetails.hbm.xml</value>
-          <value>Skills.hbm.xml</value>
-          <value>UnderGraduationDetails.hbm.xml</value>
-          </list>
-      </property>
-      <property name="hibernateProperties">
-            <value>
-                hibernate.dialect=org.hibernate.dialect.OracleDialect
-            </value>
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="placementDataSource"/>
+        <property name="mappingResources">
+            <list>
+                <value>AdvisorDetails.hbm.xml</value>
+                <value>CompanyDetails.hbm.xml</value>
+                <value>EventCriteria.hbm.xml</value>
+                <value>Event.hbm.xml</value>
+                <value>EventRound.hbm.xml</value>
+                <value>EventCollege.hbm.xml</value>
+                <value>EventDepartment.hbm.xml</value>
+                <value>LoginDetails.hbm.xml</value>
+                <value>PO.hbm.xml</value>
+                <value>Student.hbm.xml</value>
+                <value>PersonalDetails.hbm.xml</value>
+                <value>PreGraduationDetails.hbm.xml</value>
+                <value>ShortlistedStudents.hbm.xml</value>
+                <value>PlacedStudentsDetails.hbm.xml</value>
+                <value>Skills.hbm.xml</value>
+                <value>UnderGraduationDetails.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            
+           <props>  
+                <prop key="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</prop>  
+                <prop key="hibernate.hbm2ddl.auto">create</prop>  
+                <prop key="hibernate.show_sql">true</prop>  
+                  
+            </props> 
+            
         </property>
     </bean>
     
     <bean id="transactionManager"
-          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+          class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
     
@@ -57,7 +65,7 @@
     </bean>
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
-            <value>/WEB-INF/views</value>
+            <value>/WEB-INF/views/</value>
         </property>
         <property name="suffix">
             <value>.jsp</value>

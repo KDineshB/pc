@@ -41,7 +41,7 @@ Contributor(s):
 -->
 <hibernate-mapping>
     <class dynamic-insert="false" table="company_details_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.CompanyDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-        <id name="companyName" column="company_name">
+        <id name="companyName" column="company_name"  >
             <generator class="assigned"></generator>
         </id>
         

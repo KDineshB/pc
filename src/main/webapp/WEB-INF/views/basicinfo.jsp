@@ -47,6 +47,7 @@
                 </ul>
             </div>
         </nav>
-        <h2></h2>        
+        <h2>Basic Info</h2>        
+        
     </body>
 </html>

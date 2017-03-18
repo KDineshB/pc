@@ -8,11 +8,15 @@ package com.dinesh.placementcell.dao;
 import com.dinesh.placementcell.model.CompanyDetails;
 import java.util.List;
 import org.hibernate.Criteria;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author Dinesh
  */
+@Transactional
+@Repository
 public class CompanyDetailsDAOImpl extends AbstarctDao<String, CompanyDetails> implements CompanyDetailsDAO {
 
     @Override
