@@ -8,11 +8,15 @@ package com.dinesh.placementcell.dao;
 import com.dinesh.placementcell.model.Event;
 import java.util.List;
 import org.hibernate.Criteria;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author Dinesh
  */
+@Transactional
+@Repository
 public class EventDAOImpl extends AbstarctDao<String, Event> implements EventDAO {
 
     @Override
@@ -33,7 +37,7 @@ public class EventDAOImpl extends AbstarctDao<String, Event> implements EventDAO
 
     @Override
     public void addEvent(Event event) {
-        getSession().save(event);
+        getSession().persist(event);
     }
     
 }

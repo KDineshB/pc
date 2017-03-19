@@ -14,15 +14,16 @@ import org.springframework.stereotype.Repository;
  *
  * @author Dinesh
  */
-
 public interface StudentDAO {
+
+    public void addStudent(Student student);
 
     public Student findStudentByRegNo(String regNo);
 
     public void saveStudent(Student student);
 
     public List<Student> findstudentByCriteria(Criteria criteria);
-    
+
     public List<Student> findAllStudents();
 
 }

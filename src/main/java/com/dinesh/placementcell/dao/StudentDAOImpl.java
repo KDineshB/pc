@@ -6,16 +6,17 @@
 package com.dinesh.placementcell.dao;
 
 import com.dinesh.placementcell.model.Student;
-import java.io.Serializable;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author Dinesh
  */
 @Repository
+@Transactional
 public class StudentDAOImpl extends AbstarctDao<String,Student> implements StudentDAO {
 
     @Override
@@ -38,6 +39,11 @@ public class StudentDAOImpl extends AbstarctDao<String,Student> implements Stude
     public List<Student> findAllStudents() {
         Criteria criteria = createEntityCriteria();
         return ((List < Student >) criteria.list());
+    }
+
+    @Override
+    public void addStudent(Student student) {
+        getSession().persist(student);
     }
 
 }
