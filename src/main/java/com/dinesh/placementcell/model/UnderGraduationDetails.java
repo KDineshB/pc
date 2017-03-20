@@ -29,7 +29,7 @@ public class UnderGraduationDetails {
 
     private float cgpa;
 
-    private float arrearStatus;
+    private String arrearStatus;
 
     private float noOfStandingArrears;
 
@@ -111,8 +111,6 @@ public class UnderGraduationDetails {
         this.semEightSgpa = semEightSgpa;
     }
 
-  
-
     public float getCgpa() {
         return cgpa;
     }
@@ -121,11 +119,11 @@ public class UnderGraduationDetails {
         this.cgpa = cgpa;
     }
 
-    public float getArrearStatus() {
+    public String getArrearStatus() {
         return arrearStatus;
     }
 
-    public void setArrearStatus(float arrearStatus) {
+    public void setArrearStatus(String arrearStatus) {
         this.arrearStatus = arrearStatus;
     }
 

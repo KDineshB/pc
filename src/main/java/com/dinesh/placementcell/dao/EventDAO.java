@@ -13,8 +13,12 @@ import java.util.List;
  * @author Dinesh
  */
 public interface EventDAO {
+
     public Event getEventById(String id);
+
     public List<Event> getAllEvents();
+
     public void saveEvent(Event event);
+
     public void addEvent(Event event);
 }

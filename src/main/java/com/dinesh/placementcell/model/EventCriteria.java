@@ -55,8 +55,6 @@ public class EventCriteria {
         this.arrearStatus = arrearStatus;
     }
 
-
-
     public String getSkillsPreferred() {
         return skillsPreferred;
     }

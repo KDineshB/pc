@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Repository
 @Transactional
-public class PlacedStudentsDAOImpl extends AbstarctDao<String, PlacedStudentsDetails> implements PlacedStudentsDAO{
+public class PlacedStudentsDAOImpl extends AbstractDao<String, PlacedStudentsDetails> implements PlacedStudentsDAO {
 
     @Override
     public List<PlacedStudentsDetails> finStudentsByCompanyId(String companyId) {
@@ -26,5 +26,5 @@ public class PlacedStudentsDAOImpl extends AbstarctDao<String, PlacedStudentsDet
         criteria.add(Restrictions.eq("companyId", companyId));
         return criteria.list();
     }
-    
+
 }

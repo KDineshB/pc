@@ -13,8 +13,12 @@ import java.util.List;
  * @author Dinesh
  */
 public interface LoginDetailsDAO {
+
     public LoginDetails getLoginDetailsByUsername(String username);
+
     public List<LoginDetails> getLoginByCollege(String college);
+
     public void saveLogin(LoginDetails loginDetails);
+
     public void addLogin(LoginDetails loginDetails);
 }

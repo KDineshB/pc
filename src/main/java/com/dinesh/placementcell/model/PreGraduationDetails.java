@@ -159,5 +159,5 @@ public class PreGraduationDetails {
     public void setStudent(Student student) {
         this.student = student;
     }
-    
+
 }

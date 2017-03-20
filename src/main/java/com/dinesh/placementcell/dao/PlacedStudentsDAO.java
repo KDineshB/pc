@@ -13,5 +13,6 @@ import java.util.List;
  * @author Dinesh
  */
 public interface PlacedStudentsDAO {
+
     List<PlacedStudentsDetails> finStudentsByCompanyId(String companyId);
 }

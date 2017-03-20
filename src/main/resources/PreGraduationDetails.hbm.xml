@@ -52,7 +52,7 @@ Contributor(s):
         <property name="hscBoard" column="hsc_oard"/>
         <property name="hscStream" column="hsc_stream"/>
         <property name="hscYearOfGrad" column="hsc_yearofgrad"/>
-        <property name="hscPercentage" column="hsc-percentage"/>
+        <property name="hscPercentage" column="hsc_percentage"/>
         <property name="hscCuttOff" column="hsc_cuttoff"/>
         <property name="diplomaClgNamePlace" column="diploma_clgnameplace"/>
         <property name="diplomaClass" column="diploma_class"/>

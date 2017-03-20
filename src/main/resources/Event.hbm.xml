@@ -40,7 +40,7 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-    <class dynamic-insert="false" table="event_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.Event" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+    <class dynamic-insert="false" table="event_tbl" dynamic-update="false" lazy="false" mutable="true" name="com.dinesh.placementcell.model.Event" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
         <id name="eventId" column="event_id">
             <generator class="increment"></generator>
         </id>
@@ -49,7 +49,7 @@ Contributor(s):
         <list name="rounds">
             <key column="event_id"/>
             <index column="type"/>
-            <one-to-many class="com.dinesh.placementcell.model.EventRound"/>
+            <one-to-many class="com.dinesh.placementcell.model.EventRound" />
         </list>
         <list name="department">
             <key column="event_id"/>

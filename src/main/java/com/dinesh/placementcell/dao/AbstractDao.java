@@ -8,12 +8,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public abstract class AbstarctDao<PK extends Serializable, T> {
+public abstract class AbstractDao<PK extends Serializable, T> {
 
     private final Class<T> persistentClass;
 
     @SuppressWarnings("unchecked")
-    public AbstarctDao() {
+    public AbstractDao() {
         this.persistentClass = (Class<T>) (((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[1]);
     }
 

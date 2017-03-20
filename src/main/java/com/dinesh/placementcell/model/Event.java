@@ -1,6 +1,5 @@
 package com.dinesh.placementcell.model;
 
-import com.dinesh.placementcell.model.EventRound;
 import java.util.Date;
 import java.util.List;
 
@@ -30,7 +29,7 @@ public class Event {
 
     private String eventId;
 
-    private EventCriteria criteria; 
+    private EventCriteria criteria;
 
     public String getCompanyName() {
         return companyName;
@@ -135,5 +134,5 @@ public class Event {
     public void setCriteria(EventCriteria criteria) {
         this.criteria = criteria;
     }
-    
+
 }

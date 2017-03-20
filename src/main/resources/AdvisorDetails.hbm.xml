@@ -40,11 +40,11 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-  <class dynamic-insert="false" table="advisor_details_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.AdvisorDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-      <id name="advisorId" column="advisor_id">
-          <generator class="assigned"></generator>
-      </id>
-      <property name="name" column="name"/>
-      <property name="contact" column="contact"/>
-  </class>
+    <class dynamic-insert="false" table="advisor_details_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.AdvisorDetails" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+        <id name="advisorId" column="advisor_id">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="name" column="name"/>
+        <property name="contact" column="contact"/>
+    </class>
 </hibernate-mapping>

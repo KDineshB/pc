@@ -7,8 +7,6 @@ package com.dinesh.placementcell.dao;
 
 import com.dinesh.placementcell.model.*;
 import java.util.List;
-import org.hibernate.Criteria;
-import org.springframework.stereotype.Repository;
 
 /**
  *
@@ -22,8 +20,9 @@ public interface StudentDAO {
 
     public void saveStudent(Student student);
 
-    public List<Student> findstudentByCriteria(Criteria criteria);
+    public List<Student> findstudentByCriteria(EventCriteria criteria);
 
     public List<Student> findAllStudents();
 
+    public List<Student> getStudentsByName(String name);
 }

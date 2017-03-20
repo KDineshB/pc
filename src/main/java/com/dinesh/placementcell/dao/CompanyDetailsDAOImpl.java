@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @Repository
-public class CompanyDetailsDAOImpl extends AbstarctDao<String, CompanyDetails> implements CompanyDetailsDAO {
+public class CompanyDetailsDAOImpl extends AbstractDao<String, CompanyDetails> implements CompanyDetailsDAO {
 
     @Override
     public CompanyDetails findCompanyDetailsByName(String name) {
@@ -37,7 +37,7 @@ public class CompanyDetailsDAOImpl extends AbstarctDao<String, CompanyDetails> i
     @Override
     public List<CompanyDetails> findAllCompany() {
         Criteria criteria = createEntityCriteria();
-        return (List<CompanyDetails>)criteria.list();
+        return (List<CompanyDetails>) criteria.list();
     }
 
 }

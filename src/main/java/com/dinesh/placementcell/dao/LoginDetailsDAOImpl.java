@@ -15,10 +15,9 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author Dinesh
  */
-
 @Repository
 @Transactional
-public class LoginDetailsDAOImpl extends AbstarctDao<String, LoginDetails> implements LoginDetailsDAO {
+public class LoginDetailsDAOImpl extends AbstractDao<String, LoginDetails> implements LoginDetailsDAO {
 
     @Override
     public LoginDetails getLoginDetailsByUsername(String username) {
@@ -29,7 +28,7 @@ public class LoginDetailsDAOImpl extends AbstarctDao<String, LoginDetails> imple
     public List<LoginDetails> getLoginByCollege(String college) {
         Criteria criteria = createEntityCriteria();
         return criteria.list();
-         
+
     }
 
     @Override

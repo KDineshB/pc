@@ -40,16 +40,16 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-  <class dynamic-insert="false" table="event_criteria_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.EventCriteria" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
-      <id name="sNo" column="s_no"> 
-          <generator class="increment">
-          </generator>
-      </id>
-      <property name="sslcPercentage" column="sslc_percentage"/>
-      <property name="hscPercentage" column="hsc_percentage"/>
-      <property name="cgpa" column="cgpa"/>
-      <property name="arrearStatus" column="arrear_status"/>
-      <property name="skillsPreferred" column="skills_preferred"/>
-      <property name="eventId" column="event-id"/>
-  </class>    
+    <class dynamic-insert="false" table="event_criteria_tbl" dynamic-update="false" mutable="true" name="com.dinesh.placementcell.model.EventCriteria" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+        <id name="sNo" column="s_no"> 
+            <generator class="increment">
+            </generator>
+        </id>
+        <property name="sslcPercentage" column="sslc_percentage"/>
+        <property name="hscPercentage" column="hsc_percentage"/>
+        <property name="cgpa" column="cgpa"/>
+        <property name="arrearStatus" column="arrear_status"/>
+        <property name="skillsPreferred" column="skills_preferred"/>
+        <property name="eventId" column="event_id"/>
+    </class>    
 </hibernate-mapping>

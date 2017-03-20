@@ -5,9 +5,13 @@
  */
 package com.dinesh.placementcell.dao;
 
+import com.dinesh.placementcell.model.AdvisorDetails;
+import com.dinesh.placementcell.model.EventCriteria;
 import com.dinesh.placementcell.model.Student;
 import java.util.List;
 import org.hibernate.Criteria;
+import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Repository
 @Transactional
-public class StudentDAOImpl extends AbstarctDao<String,Student> implements StudentDAO {
+public class StudentDAOImpl extends AbstractDao<String, Student> implements StudentDAO {
 
     @Override
     public Student findStudentByRegNo(String regNo) {
@@ -31,14 +35,19 @@ public class StudentDAOImpl extends AbstarctDao<String,Student> implements Stude
     }
 
     @Override
-    public List<Student> findstudentByCriteria(Criteria criteria) {
-        return ((List< Student>) criteria.list());
+    public List<Student> findstudentByCriteria(EventCriteria criteria) {
+        Criteria c = createEntityCriteria();
+        c.add(Restrictions.eq("preGraduationDetails.sslcPercentage", criteria.getSslcPercentage()));
+        c.add(Restrictions.eq("preGraduationDetails.hscPercentage", criteria.getHscPercentage()));
+        c.add(Restrictions.eq("underGraduationDetails.cgpa", criteria.getCgpa()));
+        c.add(Restrictions.eq("underGraduationDetails.arrearStatus", criteria.getArrearStatus()));
+        return ((List< Student>) c.list());
     }
 
     @Override
     public List<Student> findAllStudents() {
         Criteria criteria = createEntityCriteria();
-        return ((List < Student >) criteria.list());
+        return ((List< Student>) criteria.list());
     }
 
     @Override
@@ -46,4 +55,10 @@ public class StudentDAOImpl extends AbstarctDao<String,Student> implements Stude
         getSession().persist(student);
     }
 
+    @Override
+    public List<Student> getStudentsByName(String name) {
+        Criteria criteria = createEntityCriteria();
+        criteria.add(Restrictions.like("name", name, MatchMode.ANYWHERE));
+        return criteria.list();
+    }
 }

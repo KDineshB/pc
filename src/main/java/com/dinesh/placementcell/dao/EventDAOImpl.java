@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @Repository
-public class EventDAOImpl extends AbstarctDao<String, Event> implements EventDAO {
+public class EventDAOImpl extends AbstractDao<String, Event> implements EventDAO {
 
     @Override
     public Event getEventById(String id) {
@@ -39,5 +39,5 @@ public class EventDAOImpl extends AbstarctDao<String, Event> implements EventDAO
     public void addEvent(Event event) {
         getSession().persist(event);
     }
-    
+
 }

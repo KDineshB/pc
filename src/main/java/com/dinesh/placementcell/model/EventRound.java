@@ -1,13 +1,14 @@
 package com.dinesh.placementcell.model;
+
 public class EventRound {
 
-  private int sNo;
+    private int sNo;
 
-  private String roundName;
+    private String roundName;
 
-  private String eventId;
+    private String eventId;
 
-  private String status;
+    private String status;
 
     public int getsNo() {
         return sNo;
