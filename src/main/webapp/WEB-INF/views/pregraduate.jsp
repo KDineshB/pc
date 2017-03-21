@@ -11,7 +11,7 @@
 
     <head>
 
-        <title>BasicInfo</title>
+        <title>Pre Graduate Details</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -42,8 +42,9 @@
                             <li><a href="#">Personal Details</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Events</a></li>
+                    <li><a href="/PlacementCell/event">Events</a></li>
                     <li><a href="#">Interview History</a></li>
+                    <li><a href="/PlacementCell/logout">Logout</a></li>
                 </ul>
             </div>
         </nav>
@@ -83,79 +84,79 @@
                         <form:input cssClass="form-control" path="hscSchoolNamePlace" ></form:input>
                         </div>
                     </div>
-               
 
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2"  for="hscBoard" id="hscBoard">hscBoard</label>
-                    <div class="col-sm-10">    
-                    <form:input cssClass="form-control" path="hscBoard" ></form:input>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"  for="hscBoard" id="hscBoard">hscBoard</label>
+                        <div class="col-sm-10">    
+                        <form:input cssClass="form-control" path="hscBoard" ></form:input>
+                        </div>
                     </div>
-                </div>
 
 
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2"  for="hscStream" id="hscStream">hscStream</label>
-                    <div class="col-sm-10">    
-                    <form:input cssClass="form-control" path="hscStream" ></form:input>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"  for="hscStream" id="hscStream">hscStream</label>
+                        <div class="col-sm-10">    
+                        <form:input cssClass="form-control" path="hscStream" ></form:input>
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2"  for="hscYearOfGrad" id="hscYearOfGrad">hscYearOfGrad</label>
-                    <div class="col-sm-10">    
-                    <form:input cssClass="form-control" path="hscYearOfGrad" ></form:input>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"  for="hscYearOfGrad" id="hscYearOfGrad">hscYearOfGrad</label>
+                        <div class="col-sm-10">    
+                        <form:input cssClass="form-control" path="hscYearOfGrad" ></form:input>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2"  for="hscPercentage" id="hscPercentage">hscPercentage</label>
-                    <div class="col-sm-10">    
-                    <form:input cssClass="form-control" path="hscPercentage" ></form:input>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"  for="hscPercentage" id="hscPercentage">hscPercentage</label>
+                        <div class="col-sm-10">    
+                        <form:input cssClass="form-control" path="hscPercentage" ></form:input>
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2"  for="hscCuttOff" id="hscCuttOff">hscCuttOff</label>
-                    <div class="col-sm-10">    
-                    <form:input cssClass="form-control" path="hscCuttOff" ></form:input>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"  for="hscCuttOff" id="hscCuttOff">hscCuttOff</label>
+                        <div class="col-sm-10">    
+                        <form:input cssClass="form-control" path="hscCuttOff" ></form:input>
+                        </div>
                     </div>
-                </div>
 
 
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2"  for="diplomaClgNamePlace" id="diplomaClgNamePlace">diplomaClgNamePlace</label>
-                    <div class="col-sm-10">    
-                    <form:input cssClass="form-control" path="diplomaClgNamePlace" ></form:input>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"  for="diplomaClgNamePlace" id="diplomaClgNamePlace">diplomaClgNamePlace</label>
+                        <div class="col-sm-10">    
+                        <form:input cssClass="form-control" path="diplomaClgNamePlace" ></form:input>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2"  for="diplomaClass" id="diplomaClass">diplomaClass</label>
-                    <div class="col-sm-10">    
-                    <form:input cssClass="form-control" path="diplomaClass" ></form:input>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"  for="diplomaClass" id="diplomaClass">diplomaClass</label>
+                        <div class="col-sm-10">    
+                        <form:input cssClass="form-control" path="diplomaClass" ></form:input>
+                        </div>
                     </div>
-                </div>
 
 
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2"  for="diplomaYearOfGrad" id="diplomaYearOfGrad">diplomaYearOfGrad</label>
-                    <div class="col-sm-10">    
-                    <form:input cssClass="form-control" path="diplomaYearOfGrad" ></form:input>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"  for="diplomaYearOfGrad" id="diplomaYearOfGrad">diplomaYearOfGrad</label>
+                        <div class="col-sm-10">    
+                        <form:input cssClass="form-control" path="diplomaYearOfGrad" ></form:input>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">        
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Submit</button>
+                    <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
                     </div>
-                </div>
-        </form:form>
-</div>
-</body>
+            </form:form>
+        </div>
+    </body>
 </html>

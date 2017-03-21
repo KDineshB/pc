@@ -1,18 +1,79 @@
 <b:beans xmlns="http://www.springframework.org/schema/security"
          xmlns:b="http://www.springframework.org/schema/beans"
+         xmlns:context="http://www.springframework.org/schema/context"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+         xmlns:tx="http://www.springframework.org/schema/tx"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context-4.3.xsd
+                            http://www.springframework.org/schema/security 
+                            http://www.springframework.org/schema/security/spring-security.xsd  
+                            http://www.springframework.org/schema/tx
+                            http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-    <http >
-        <intercept-url pattern="/" access="ROLE_USER"></intercept-url>
+    <http use-expressions="false">
+        <intercept-url pattern="/" access="ROLE_STU"></intercept-url>
+        <intercept-url pattern="/advisor/" access="ROLE_ADV"></intercept-url>
+        <form-login  authentication-failure-url="/accessdenied"></form-login>
+        <logout ></logout>
     </http>
-    <user-service>
-        <user name="user" password="password" authorities="ROLE_USER" />
-    </user-service>
+    <context:component-scan base-package="com.dinesh">
+        <context:exclude-filter expression="org.springframework.stereotype.Controller"
+                                type="annotation"/>
+    </context:component-scan>
     <authentication-manager >
         <authentication-provider user-service-ref="loginServiceImpl"></authentication-provider>
     </authentication-manager>
-    <form-login login-page="/login" default-target-url="/list" authentication-failure-url="/accessdenied"></form-login>
-    <logout logout-success-url="/logout"></logout>
+    <tx:annotation-driven/>
+    <b:bean id="sessionFactory"
+            class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <b:property name="dataSource" ref="placementDataSource"/>
+        <b:property name="mappingResources">
+            <b:list>
+                <b:value>AdvisorDetails.hbm.xml</b:value>
+                <b:value>CompanyDetails.hbm.xml</b:value>
+                <b:value>EventCriteria.hbm.xml</b:value>
+                <b:value>Event.hbm.xml</b:value>
+                <b:value>EventRound.hbm.xml</b:value>
+                <b:value>EventCollege.hbm.xml</b:value>
+                <b:value>EventDepartment.hbm.xml</b:value>
+                <b:value>LoginDetails.hbm.xml</b:value>
+                <b:value>PO.hbm.xml</b:value>
+                <b:value>Student.hbm.xml</b:value>
+                <b:value>PersonalDetails.hbm.xml</b:value>
+                <b:value>PreGraduationDetails.hbm.xml</b:value>
+                <b:value>ShortlistedStudents.hbm.xml</b:value>
+                <b:value>PlacedStudentsDetails.hbm.xml</b:value>
+                <b:value>Skills.hbm.xml</b:value>
+                <b:value>UnderGraduationDetails.hbm.xml</b:value>
+            </b:list>
+        </b:property>
+        <b:property name="hibernateProperties">
+            
+            <b:props>  
+                <b:prop key="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</b:prop>  
+                <b:prop key="hibernate.hbm2ddl.auto">update</b:prop>  
+                <b:prop key="hibernate.show_sql">true</b:prop>  
+                  
+            </b:props> 
+            
+        </b:property>
+    </b:bean>
+    
+    <b:bean id="transactionManager"
+            class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <b:property name="sessionFactory" ref="sessionFactory" />
+    </b:bean>
+    
+    <b:bean id="placementDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <b:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <b:property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+        <b:property name="username" value="dinesh"/>
+        <b:property name="password" value="dinesh"/>
+    </b:bean> 
+    <b:bean id="loginServiceImpl" class="com.dinesh.placementcell.service.LoginServiceImpl">
+        <b:property name="loginDetailsDAO" ref="loginDetailsDAO"/>
+    </b:bean>
+    <b:bean id="loginDetailsDAO" class="com.dinesh.placementcell.dao.LoginDetailsDAOImpl"/>
 </b:beans>
