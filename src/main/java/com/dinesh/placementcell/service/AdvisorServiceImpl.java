@@ -61,4 +61,10 @@ public class AdvisorServiceImpl implements AdvisorService {
         return advisorDAO.getAdvisorDetailsByName(name);
     }
 
+	@Override
+	public void saveAdvisor(AdvisorDetails advisorDetails) {
+		advisorDAO.saveAdvisor(advisorDetails);
+		
+	}
+
 }

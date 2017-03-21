@@ -5,10 +5,14 @@
  */
 package com.dinesh.placementcell.service;
 
+import com.dinesh.placementcell.model.LoginDetails;
+
 /**
  *
  * @author Dinesh
  */
 public interface LoginService {
+	
+	public void addNewStudentLogin(LoginDetails loginDetails);
 
 }

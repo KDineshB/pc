@@ -36,4 +36,9 @@ public class LoginServiceImpl implements LoginService, UserDetailsService {
         UserDetails user = new User(details.getUserId(), details.getPassword(), true, true, true, true, list);
         return user;
     }
+
+	@Override
+	public void addNewStudentLogin(LoginDetails loginDetails) {
+		loginDetailsDAO.addLogin(loginDetails);		
+	}
 }
