@@ -46,6 +46,15 @@ Contributor(s):
         </id>
         <property name="companyName" column="company_name"/>
         <property name="eventDate" column="event_date"/>
+        <property name="venue" column="venue"/>
+        <property name="notes" column="notes"/>
+        <property name="instruction" column="instruction"/>
+        <property name="startTime" column="start_time"/>
+        <property name="joiningLocation" column="joining_location"/>
+        <property name="bond" column="bond"/>
+        <property name="venue" column="venue"/>
+        <one-to-one name="criteria" class="com.dinesh.placementcell.model.EventCriteria"></one-to-one>
+        
         <list name="rounds">
             <key column="event_id"/>
             <index column="type"/>

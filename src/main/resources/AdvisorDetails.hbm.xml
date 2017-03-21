@@ -45,6 +45,8 @@ Contributor(s):
             <generator class="assigned"></generator>
         </id>
         <property name="name" column="name"/>
+        <property name="college" column="college" />
+        <property name="department" column="department" />
         <property name="contact" column="contact"/>
     </class>
 </hibernate-mapping>
