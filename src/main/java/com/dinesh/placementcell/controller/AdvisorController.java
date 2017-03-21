@@ -1,3 +1,4 @@
+
 package com.dinesh.placementcell.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ import com.dinesh.placementcell.service.Utilities;
  */
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/advisor")
 
 public class AdvisorController {
 	
@@ -85,5 +86,28 @@ public class AdvisorController {
 		
 	}
 	
+  @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String addStudent(ModelMap map) {
 
+        return "advisor_add_student";
+    }
+
+    @RequestMapping(value = "/addstudentc", method = RequestMethod.POST)
+    public String addStudentWithCount(HttpServletRequest request, HttpServletResponse response, ModelMap map) {
+        int i = 0;
+        if (request.getParameter("count") != null) {
+            i = Integer.parseInt(request.getParameter("count").toString());
+        }
+        request.setAttribute("count", i);
+        return "advisor_add_student";
+    }
+
+    @RequestMapping(value = "/addstudentsave", method = RequestMethod.POST)
+    public String addStudentSave(HttpServletRequest request, HttpServletResponse response, ModelMap map) {
+        request.setAttribute("count", 0);
+        request.setAttribute("flag", "ok");
+        return "advisor_add_student";
 }
+
+
+

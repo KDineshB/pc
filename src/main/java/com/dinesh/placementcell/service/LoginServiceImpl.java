@@ -16,13 +16,11 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Dinesh
  */
-@Service
 public class LoginServiceImpl implements LoginService, UserDetailsService {
 
     @Autowired
@@ -32,13 +30,25 @@ public class LoginServiceImpl implements LoginService, UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         LoginDetails details = loginDetailsDAO.getLoginDetailsByUsername(username);
         List<GrantedAuthority> list = new ArrayList<>();
-        list.add(new SimpleGrantedAuthority("ROLE_USER"));
+        list.add(new SimpleGrantedAuthority(details.getRole()));
+        System.out.println(username);
         UserDetails user = new User(details.getUserId(), details.getPassword(), true, true, true, true, list);
         return user;
     }
+
 
 	@Override
 	public void addNewStudentLogin(LoginDetails loginDetails) {
 		loginDetailsDAO.addLogin(loginDetails);		
 	}
+
+    public LoginDetailsDAO getLoginDetailsDAO() {
+        return loginDetailsDAO;
+    }
+
+    public void setLoginDetailsDAO(LoginDetailsDAO loginDetailsDAO) {
+        this.loginDetailsDAO = loginDetailsDAO;
+    }
+
+
 }

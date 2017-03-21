@@ -42,8 +42,9 @@
                             <li><a href="/PlacementCell/personal">Personal Details</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Events</a></li>
+                    <li><a href="/PlacementCell/event">Events</a></li>
                     <li><a href="#">Interview History</a></li>
+                    <li><a href="/PlacementCell/logout">Logout</a></li>
                 </ul>
             </div>
         </nav>
@@ -67,34 +68,48 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2"  for="clgName" id="regNo">College</label>
-                        <div class="col-sm-10">    
-                        <form:input cssClass="form-control" path="clgName" ></form:input>
-                        </div>
+                        <div class="col-sm-10">   
+                        <form:select cssClass="form-control" path="branch">
+                            <form:option value="KSRCE"></form:option>
+                            <form:option value="KSRCT"></form:option>
+                            <form:option value="KSRIET"></form:option>
+                        </form:select>
+
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2"  for="degree" id="regNo">Degree</label>
-                        <div class="col-sm-10">    
-                        <form:input cssClass="form-control" path="degree" ></form:input>
-                        </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2"  for="degree" id="regNo">Degree</label>
+                    <div class="col-sm-10">   
+                        <form:select cssClass="form-control" path="degree">
+                            <form:option value="BE"></form:option>
+                            <form:option value="ME"></form:option>
+                        </form:select>
+
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2"  for="degree" id="degree">Degree</label>
-                        <div class="col-sm-10">    
-                        <form:input cssClass="form-control" path="degree" ></form:input>
-                        </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2"  for="branch" id="regNo">Branch</label>
+
+                    <div class="col-sm-10">   
+                        <form:select cssClass="form-control" path="branch">
+                            <form:option value="CSE"></form:option>
+                            <form:option value="MECH"></form:option>
+                            <form:option value="EEE"></form:option>
+                            <form:option value="ECE"></form:option>
+                        </form:select>
+
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2"  for="branch" id="branch">Branch</label>
-                        <div class="col-sm-10">    
-                        <form:input cssClass="form-control" path="branch" ></form:input>
-                        </div>
-                    </div>
+                </div>
 
 
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-2"  for="section" id="section">Section</label>
-                        <div class="col-sm-10">    
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2"  for="section" id="section">Section</label>
+                    <div class="col-sm-10">    
                         <form:input cssClass="form-control" path="section" ></form:input>
                         </div>
                     </div>
@@ -111,14 +126,18 @@
 
                     <div class="form-group">
                         <label class="control-label col-sm-2"  for="gender" id="gender">Gender</label>
-                        <div class="col-sm-10">    
-                        <form:input cssClass="form-control" path="gender" ></form:input>
-                        </div>
-                    </div>
+                        <div class="col-sm-10">   
+                        <form:select cssClass="form-control" path="branch">
+                            <form:option value="Male"></form:option>
+                            <form:option value="Female"></form:option>
+                        </form:select>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-2"  for="email" id="gender">Mail Id</label>
-                        <div class="col-sm-10">    
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2"  for="email" id="gender">Mail Id</label>
+                    <div class="col-sm-10">    
                         <form:input cssClass="form-control" path="email" ></form:input>
                         </div>
                     </div>
@@ -142,14 +161,19 @@
 
                     <div class="form-group">
                         <label class="control-label col-sm-2"  for="stay" id="phone">Stay</label>
-                        <div class="col-sm-10">    
-                        <form:input cssClass="form-control" path="stay" ></form:input>
-                        </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-2"  for="admissionMode" id="admissionMode">Mode Of Admission</label>
-                        <div class="col-sm-10">    
+                        <div class="col-sm-10">   
+                        <form:select cssClass="form-control" path="branch">
+                            <form:option value="Hosteller"></form:option>
+                            <form:option value="Dayscholar"></form:option>
+                        </form:select>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2"  for="admissionMode" id="admissionMode">Mode Of Admission</label>
+                    <div class="col-sm-10">    
                         <form:input cssClass="form-control" path="admissionMode" ></form:input>
                         </div>
                     </div>

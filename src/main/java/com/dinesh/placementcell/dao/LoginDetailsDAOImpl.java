@@ -21,7 +21,9 @@ public class LoginDetailsDAOImpl extends AbstractDao<String, LoginDetails> imple
 
     @Override
     public LoginDetails getLoginDetailsByUsername(String username) {
-        return getByKey(username);
+        LoginDetails details=getByKey(username);
+        System.out.println("com.dinesh.placementcell.dao.LoginDetailsDAOImpl.getLoginDetailsByUsername()"+details);
+        return details;
     }
 
     @Override
