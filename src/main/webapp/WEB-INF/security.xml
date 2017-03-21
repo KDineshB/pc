@@ -6,6 +6,9 @@
 
     <http >
         <intercept-url pattern="/" access="ROLE_USER"></intercept-url>
+          <form-login login-page="/login" default-target-url="/list" authentication-failure-url="/accessdenied"></form-login>
+    <logout logout-success-url="/logout"></logout>  <form-login login-page="/login" default-target-url="/list" authentication-failure-url="/accessdenied"></form-login>
+    <logout logout-success-url="/logout"></logout>
     </http>
     <user-service>
         <user name="user" password="password" authorities="ROLE_USER" />
@@ -13,6 +16,5 @@
     <authentication-manager >
         <authentication-provider user-service-ref="loginServiceImpl"></authentication-provider>
     </authentication-manager>
-    <form-login login-page="/login" default-target-url="/list" authentication-failure-url="/accessdenied"></form-login>
-    <logout logout-success-url="/logout"></logout>
+  
 </b:beans>
