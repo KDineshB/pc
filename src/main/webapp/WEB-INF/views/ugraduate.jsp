@@ -11,7 +11,7 @@
 
     <head>
 
-        <title>BasicInfo</title>
+        <title>Under Graduate Details</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -42,8 +42,9 @@
                             <li><a href="/PlacementCell/personal">Personal Details</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Events</a></li>
+                    <li><a href="/PlacementCell/event">Events</a></li>
                     <li><a href="#">Interview History</a></li>
+                    <li><a href="/PlacementCell/logout">Logout</a></li>
                 </ul>
             </div>
         </nav>

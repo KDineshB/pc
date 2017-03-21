@@ -54,8 +54,8 @@ Contributor(s):
         <property name="bond" column="bond"/>
         <property name="venue" column="venue"/>
         <one-to-one name="criteria" class="com.dinesh.placementcell.model.EventCriteria"></one-to-one>
-        
-        <list name="rounds">
+                          
+         <list name="rounds">
             <key column="event_id"/>
             <index column="type"/>
             <one-to-many class="com.dinesh.placementcell.model.EventRound" />
