@@ -36,6 +36,12 @@ public class LoginServiceImpl implements LoginService, UserDetailsService {
         return user;
     }
 
+
+	@Override
+	public void addNewStudentLogin(LoginDetails loginDetails) {
+		loginDetailsDAO.addLogin(loginDetails);		
+	}
+
     public LoginDetailsDAO getLoginDetailsDAO() {
         return loginDetailsDAO;
     }
@@ -43,5 +49,6 @@ public class LoginServiceImpl implements LoginService, UserDetailsService {
     public void setLoginDetailsDAO(LoginDetailsDAO loginDetailsDAO) {
         this.loginDetailsDAO = loginDetailsDAO;
     }
+
 
 }

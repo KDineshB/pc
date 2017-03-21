@@ -23,4 +23,6 @@ public interface AdvisorService {
     public List<AdvisorDetails> getAdvisorByCollegeAndDept(String college, String dept);
 
     public List<AdvisorDetails> getAdviosrByName(String name);
+    
+    public void saveAdvisor(AdvisorDetails advisorDetails);
 }
