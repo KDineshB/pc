@@ -12,11 +12,15 @@
                             http://www.springframework.org/schema/tx
                             http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
+
+    
+
     <http use-expressions="false">
         <intercept-url pattern="/" access="ROLE_STU"></intercept-url>
         <intercept-url pattern="/advisor/" access="ROLE_ADV"></intercept-url>
         <form-login  authentication-failure-url="/accessdenied"></form-login>
         <logout ></logout>
+
     </http>
     <context:component-scan base-package="com.dinesh">
         <context:exclude-filter expression="org.springframework.stereotype.Controller"
@@ -25,6 +29,9 @@
     <authentication-manager >
         <authentication-provider user-service-ref="loginServiceImpl"></authentication-provider>
     </authentication-manager>
+
+  
+
     <tx:annotation-driven/>
     <b:bean id="sessionFactory"
             class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
